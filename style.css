@@ -52,7 +52,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .hero-overlay {
   position: absolute;
@@ -133,6 +133,13 @@ a { color: inherit; text-decoration: none; }
   border-radius: 12px;
 }
 .step { color: var(--muted); font-size: 0.9rem; }
+   .thumb video {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     border-radius: 12px;
+     display: block;
+   }
 
 /* CTA */
 .cta { text-align: center; }
