@@ -52,7 +52,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .hero-overlay {
   position: absolute;
@@ -133,13 +133,6 @@ a { color: inherit; text-decoration: none; }
   border-radius: 12px;
 }
 .step { color: var(--muted); font-size: 0.9rem; }
-   .thumb video {
-     width: 100%;
-     height: 100%;
-     object-fit: contain;
-     border-radius: 12px;
-     display: block;
-   }
 
 /* CTA */
 .cta { text-align: center; }
@@ -158,3 +151,83 @@ a { color: inherit; text-decoration: none; }
 }
 .site-footer a { margin-left: 16px; }
 .site-footer a:hover { color: var(--text); }
+
+
+
+/* TESTIMONIALS */
+.testimonials {
+  max-width: 1000px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.testimonials h2 {
+  margin-bottom: 16px;
+}
+
+.testimonials-intro {
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
+.testimonial-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: clamp(24px, 5vw, 48px);
+}
+
+.testimonial-client {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.client-image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.client-info h3 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.client-info p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.quote-mark {
+  display: block;
+  color: #777;
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 0.8;
+  margin-bottom: 16px;
+}
+
+.testimonial-card blockquote {
+  max-width: 760px;
+  font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.testimonial-author {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
