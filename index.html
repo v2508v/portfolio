@@ -68,12 +68,16 @@
           <p>Short description of the project and what you did.</p>
         </article>
         <article class="card">
-          <div class="thumb"></div>
+             <div class="thumb">
+     <video src="assets/project2.mp4" autoplay muted loop playsinline></video>
+   </div>
           <h3>Testing project</h3>
           <p>Short description of the project and what you did.</p>
         </article>
         <article class="card">
-          <div class="thumb"></div>
+             <div class="thumb">
+     <video src="assets/project3.mp4" autoplay muted loop playsinline></video>
+   </div>
           <h3>Project three</h3>
           <p>Short description of the project and what you did.</p>
         </article>
@@ -119,29 +123,25 @@
         A few words from the people I've had the pleasure of working with.
       </p>
 
-      <div class="testimonial-card">
-        <div class="testimonial-client">
-          <img
-            src="Kundetilbakemelding i moderne mørk stil.png"
-            alt="Client company logo"
-            class="client-image"
-          />
+           <div class="testimonial-card">
+     <div class="testimonial-client">
+       <div class="client-info">
+         <h3>Company Name</h3>
+         <p>Client / Company representative</p>
+       </div>
+     </div>
 
-          
+     <span class="quote-mark" aria-hidden="true">“</span>
 
-        <span class="quote-mark" aria-hidden="true">“</span>
+     <blockquote>
+       "Add the client's actual feedback here."
+     </blockquote>
 
-        <blockquote>
-          "Add the client's actual feedback here. For example, describe
-          their experience working with you, the quality of your video,
-          or how your work helped their project."
-        </blockquote>
-
-        <p class="testimonial-author">
-          — Client Name, Job Title
-        </p>
-      </div>
-    </section>
+     <p class="testimonial-author">
+       — Client Name, Job Title
+     </p>
+   </div>
+   </section>
 
 
   <!-- FOOTER -->
@@ -154,5 +154,25 @@
     </span>
   </footer>
 
+     <script>
+     // Header turns dark when you scroll
+     const header = document.querySelector('.site-header');
+     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+     window.addEventListener('scroll', onScroll, { passive: true });
+     onScroll();
+
+     // Sections fade in as you scroll to them
+     const items = document.querySelectorAll('.section h2, .section > p, .grid, .testimonial-card');
+     items.forEach(el => el.classList.add('reveal'));
+     const observer = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add('visible');
+           observer.unobserve(entry.target);
+         }
+       });
+     }, { threshold: 0.15 });
+     items.forEach(el => observer.observe(el));
+   </script>
 </body>
 </html>
